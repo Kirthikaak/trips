@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1">
+        
+        <style>
+            body{
+                background-color: beige;
+            }
+        
+            .k{
+                position:relative ;
+                text-align: center;
+                color:aquamarine;
+                
+            }
+            .kk{
+                position: absolute;
+                top: 30%;
+                bottom: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                color:#fff;
+                text-transform: uppercase;
+                
+            }
+            
+        </style>
+        <style>
+            select{
+                background: rgb(192,222,209);
+                border:2px solid rgb(70,73,116) ;
+            }
+            
+        </style>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                font-family:monospace;
+            }
+            ul{
+                list-style: none;
+                background: #22438c;
+            }
+            ul li{
+                display: inline-block;
+                position: relative;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color:white;
+                font-size: 18px;
+            }
+            ul li a{
+                display: block;
+                padding: 10px 15px;
+                color:#fff;
+                text-decoration:none;
+                text-align: center;
+                font-size: 18px;
+            }
+            ul li ul.dropdown li{
+                display: block;
+            }
+            ul li ul.dropdown{
+                width: 100%;
+                background: #22438c;
+                position: absolute;
+                z-index: 999;
+                display: none;
+            }
+            ul li a:hover{
+                background: #112c66;
+            }
+            ul li:hover ul.dropdown{
+                display:block;
+            }
+
+        </style>
+        </head>
+    <body>
+        <div class="k">
+            <img src="img.html/bggg.jpg"
+            style="height:200px;width:1518px;">
+        </div>
+        <div class="kk">
+            <h1>kk</h1>
+        </div>
+    </body>
+    <body>
+        <ul>
+            <li>About us</li>
+            <li>
+                <a href="#">Tour Destination</a>
+                <ul class="dropdown">
+                    <li><a href="North Indian Packages.html">North Indian Packages</a></li><hr>
+                    <li><a href="South Indian Packages.html">South Indian Packages</a></li><hr>
+                    <li><a href="East Indian Packages.html">East Indian Packages</a></li><hr>
+                    <li><a href="West Indian Packages.html">West Indian Packages</a></li><hr>
+                    <li><a href="International Packages.html">International Packages</a></li><hr>
+                    <li><a href="State Packages.html">State Packages</a></li><hr>
+                </ul>
+        </li>
+        <li>
+            <a href="#">University Tour</a>
+            <ul class="dropdown">
+                <li><a href="Engineering.html">Engineering</a></li><hr>
+                <li><a href="Architecture.html">Architecture</a></li><hr>
+                <li><a href="Arts and Science.html">Arts and Science</a></li><hr>
+                <li><a href="Medical.html">Medical</a></li><hr>
+            </ul>
+        </li>
+            <li><a href="Calendar.html">Calendar</a></li>
+            <li><a href="Guide.html">Guide</a></li>
+            <li><a href="T&C.html">T&C</a></li>
+        
+        </ul>
+        <style>
+            .u{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .u img{
+                width: 400px;
+                height: 300px;
+                border: 2px solid #ff3d0036;
+                border-radius: 13px;
+                box-shadow: 4px 7px 7px 0px #00000042;
+                cursor: pointer;
+                margin: 10px;
+                transition: 400ms;
+            }
+            .u img:hover{
+                filter: grayscale(1);
+                transform: scale(1.03);
+            }
+            h1{
+               text-align:center;
+               text-decoration:wavy;
+               text-transform:uppercase;
+               text-shadow: #ff3d0036;
+               font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .z{
+                text-align:left;
+                font-family:cursive;
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                position: relative;
+                top:10px;
+                left:100px;
+                margin-right: 100px;
+            
+            
+                
+            }
+            .b{
+             
+               height: 200px;
+               width: 300px;
+               background-color:cadetblue;
+                font-family:cursive;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 3%;
+                margin-bottom: 3%;
+            }
+            .c{
+               height: 200px;
+               width: 300px;
+               background-color:cadetblue;
+                font-family:cursive;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 3%;
+                margin-bottom: 3%;
+            }
+            .d{
+               height: 200px;
+               width: 300px;
+               background-color:cadetblue;
+                font-family:cursive;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 3%;
+                margin-bottom: 3%;
+            }
+            .container{
+                width: 90%;
+                padding: 0px;
+                margin:10px auto;
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+            }
+            .box{
+                width:300px;
+                margin: 0 10px;
+                
+
+            }
+           .box img{
+                display: block;
+                width: 100%;
+                border-radius: 20px;
+            }
+            .box:hover{
+                transform:scale(1.3);
+                z-index: 2;
+            }
+            
+        </style>
+        <div class="u">
+            <img src="img.html/nasa.jpg" alt="">
+            <img src="img.html/trip.jpg" alt="">
+            <img src="img.html/trip1.jpg" alt="">
+            <img src="img.html/trip 2.jpg" alt="">
+            <img src="img.html/trip 4.jpg" alt="">
+            <img src="img.html/trip 5.jpeg"alt="">
+        </div>
+        <h1>welcome to kk</h1>
+        <br>
+        
+        <p class="z">Memories of school Educational trips are among the most prominent of the formative years, largely because they are a welcome break in the routine for both students and teachers. While their purpose is essentially to educate, they can also be a fun bonding experience for everyone involved.</p>
+        <br>
+        <hr>
+        <centre>
+            
+            <div class="b">
+                
+                <h1 >10,000+ Abroad Trips</h1>
+                 For the last decade, kk trips have organized more than 10,000 international itineraries.
+            </div>
+            <hr>
+            <div class="c">
+                <h1>95% happy students</h1>
+                kk trips holds record of 95% students satisfaction and all institutes are retained with us
+            </div>
+            <hr>
+            <div class="d">
+                <h1>Popular packages</h1>
+                kk trips provides various packages which helps the students for handcrafted experiments
+            </div>
+            <hr>
+        </centre>
+        <h1>our happy students</h1>
+        <div class="container">
+            <div class="box">
+                <img src="img.html/a1.jpg">
+            </div>
+            <div class="box">
+                <img src="img.html/a2.jpg">
+            </div>
+            <div class="box">
+                <img src="img.html/a3.jpg">
+            </div>
+            <div class="box">
+                <img src="img.html/a4.jpg">
+            </div>
+            
+        </div>
+        </body>
+        </html>
+        <html>
+            <style>
+                body{
+                    margin 0;
+                    font-family: sans-serif;
+                }
+                .section{
+                    background-color: #252121;
+                    display: flex;
+                     justify-content: space-between;
+                     padding: 40px;
+                     width: 60%;
+                     margin: 5rem auto 0 auto;
+                }
+                .section img{
+                     height: 250px;
+                     
+                }
+                .section h1{
+                    margin: 0;
+                    color: greenyellow;
+                    text-decoration: dotted;
+                }
+                .section p{
+                    color:aquamarine;
+                    margin: 15px;
+                    font-family: cursive;
+                }
+                p{
+                    font-size: 20px;
+                    font-family: cursive;
+                    text-align: center;
+                    margin: 30px;
+                }
+            </style>
+        <body>
+            <br>
+            <br>
+            <h1>our tour includes</h1>
+           <div class="section">
+            <div class="text">
+                <h1>industrial visits</h1>
+                <p>
+                    kk plans different tours at different destinations with a package of fun and education which includes:
+                 To get the knowledge “How it made?” & “How it works?”
+            </div>
+            <img src="img.html/b.jpg" alt="">
+        </p>
+           </div>   
+           <div class="section">
+            <div class="text">
+                <h1>Museum and historic place visit</h1>
+                <p>To be better informed about the institute of learning that will guide your future course.To know our ancient history and culture.To learn about the architecture, cultural heritage and our ancient civilization.
+                   
+            </div>
+            <img src="img.html/b1.jpg" alt="">
+        </p>
+           </div>   
+        </div>   
+        <div class="section">
+         <div class="text">
+             <h1>Science park and planatorium visit</h1>
+             <p>To learn about the science factsand to understand about our universe and astronomy.
+                
+         </div>
+         <img src="img.html/b2.jpg" alt="">
+     </p>
+        </div>   
+        <div class="section">
+            <div class="text">
+                <h1>Sports and Adventurous place visit</h1>
+                <p>To develop physically in a safe & challenging for refreshing the mind of the students and many more fun trips.
+                   
+            </div>
+            <img src="img.html/b3.jpg" alt="">
+        </p>
+        <br>
+           </div>  
+           <br>
+           <h1 >WHY EDUCATIONAL TRIPS?</h1>
+          <p > Memories of school Educational trips are among the most prominent of the formative years, largely because they are a welcome break in the routine for both students and teachers. While their purpose is essentially to educate, they can also be a fun bonding experience for everyone involved</p>
+        </body>
+</html>
+<br>
+<html>
+    <style>
+        .o{
+            display: flex;
+            
+            align-content: center;
+            justify-content: center;
+        }
+        .o div{
+            background-color:goldenrod;
+            align-items: center;
+            margin: 20px;
+            width: 90%;
+            font-size: 25px;
+            font-family:cursive;
+        }
+    </style>
+    <body>
+        <div class="o">
+            <div>**Socialization**<br><hr>
+                Taking students into a new environment gives them the experience of travelling in a group and teaches them to be respectful of the locations they visit.</div>
+                <div>**Curiosity**<br><hr>
+                    Students who go on Educational trips find that they want to learn more about the subjects on which the trip focused</div>
+                <div>**Reinforcement**<br><hr>
+                    The trip can reinforce what a teacher has been instructing in class about a subject and help students understand the topic better.</div>
+                    <div>**Exposure**<br><hr>
+                        Kids get to visit a place to which they have never been before. This can be particularly advantageous to students who are less fortunate and don’t have the opportunity to travel
+                    </div>
+                    
+        </div>
+        <hr>
+    </body>
+</html>
+<html>
+    <style>
+        
+        .n{
+            text-align: center;
+            justify-content: center;
+            font-family:cursive;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .m{
+           padding-left: 25%;
+        }
+        .g{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+        
+        .g div{
+            background-color:darkgrey;
+            align-items: center;
+            margin: 20px;
+            width: 50%;
+            font-size: 20px;
+            font-family:cursive;
+        }
+    </style>
+    <body>
+        <h1 style="font-size:30px;">ABOUT US</h1>
+        <p class="n">Edutour is a specialist tour operator serving exclusively the academic sector by arranging educational & fun tours for students of every age all over India and overseas.
+
+            We are different as we educate and inform students about historical/geographical/cultural values etc. wherever the tour takes place. We also arrange industrial visits & organize industrial training in different sectors such as Automotive, Electrical, Oil & Gas, and Telecommunication to name a few.
+            
+            We have over many years combined experience in providing the utmost in quality, authenticity and service in the group travel industry.
+            
+            We have strong hold in the domestic market as well. We believe in “Service with quality & Smile”. We use the best system for operations which adds “Valued Efficiency” to our teamwork thus making hospitality not a business affair but a “Commitment & Pledge” towards client’s satisfaction.
+            
+            At Edutour, we understand that planning a group trip can be a lot of work and that is why we believe in providing value every step of the way.</p>
+            <hr>
+            <img class="m" src="img.html/b4.png">
+            <div class="g">
+             <h1 style="font-size: 23px;font-style: italic;">OUR MISSION -></h1>
+            <div>kk trips is a full integrated travel company that offers comprehensive solutions for all the business and leisure travelers across the world. This prestigious travel company in Chennai mainly aims to satisfy the students requirements with ultimate transparency and cost-effectiveness. We assure to offer round the clock support and assistance at any point of your travel.</div>
+            <h1 style="font-size:23px;font-style: italic;">OUR VISSION -></h1>
+            <div>Our Team is striving hard to become the world class travel company and industry leader in the near future. We are planning to focus on customer centric approach and gain recognition among the worldwide clients. The travel company believes in maintaining highest quality standards and craft extraordinary moments especially for you.</div>
+            </div>
+    </body>
+</html>
+
