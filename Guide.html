@@ -1,1 +1,663 @@
-hellllllo
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1">
+        
+        <style>
+            body{
+                background-color:white;
+            }
+        
+            .k{
+                position:relative ;
+                text-align: center;
+                color:aquamarine;
+                filter: blur(2px);
+                
+            }
+            .kk{
+                position: absolute;
+                top: 18%;
+                bottom: 65%;
+                left: 10%;
+                transform: translate(-50%,-50%);
+                color:#252121;
+                text-transform: uppercase;
+                font-size: 40px;
+                background-color:#fff;
+                padding-left: 5px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 5px;
+                margin-bottom: 28px;   
+            }
+            .kkk
+            {
+                position: absolute;
+                top: 18%;
+                bottom: 65%;
+                left: 85%;
+                transform: translate(-50%,-50%);
+                color:#252121;
+                text-transform: uppercase;
+                padding-left: 5px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 5px;
+                margin-bottom: 33px;
+                text-decoration: none;
+                
+            }
+            .kkk .btn{
+                background-color: crimson;
+                height: 55px;
+                font-size: 17px;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                border: #252121;
+                box-sizing: border-box;
+              width: 100px;
+            border: none;
+            outline: none;
+            color: #fff;
+            border-radius: 30px;
+            margin-top: 20px;
+            box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+            }
+            *{
+                padding: 0;
+                margin: 0;
+                font-family:monospace;
+            }
+            ul{
+                list-style: none;
+                background: #22438c;
+            }
+            ul li{
+                display: inline-block;
+                position: relative;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color:white;
+                font-size: 18px;
+            }
+            ul li a{
+                display: block;
+                padding: 10px 15px;
+                color:#fff;
+                text-decoration:none;
+                text-align: center;
+                font-size: 18px;
+            }
+            ul li ul.dropdown li{
+                display: block;
+            }
+            ul li ul.dropdown{
+                width: 100%;
+                background: #22438c;
+                position:absolute;
+                z-index: 999;
+                display: none;
+            }
+            ul li a:hover{
+                background: #112c66;
+            }
+            ul li:hover ul.dropdown{
+                display:block;
+            }
+            .g{
+                position:relative ;
+                text-align: center;
+                color:aquamarine;
+            }
+            .gg{
+                position: absolute;
+                top: 43%;
+                bottom: 65%;
+                left: 49%;
+                transform: translate(-50%,-50%);
+                color:#252121;
+                text-transform: uppercase;
+                font-size: 30px;
+                padding-left: 5px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 5px;
+                margin-bottom: 28px;   
+                
+            }
+            .x{
+                font-size: 18px;
+                 background-color:#cdc8c8;
+                padding: 5px;
+                margin-left: 20%;
+                margin-right: 8%;
+                box-sizing: border-box;
+                border-color: #22438c;
+                border: 3px solid;
+                font-family: cursive;
+
+            }
+            
+            
+            .extra{
+                display: none;
+            }
+            p{
+                display: inline;
+            }
+            input[type="checkbox"]{
+                height: 2em;
+                display: block;
+                appearance: none;
+            }
+            .hello{
+                position: relative;
+                padding: 1em;
+                background-color: #252121;
+                color: #fff;
+                cursor: pointer;
+                margin-left: 80%;
+                padding: 9px;
+                margin-top: 15%;
+            }
+            .hello:before{
+                content: "Read more";
+            
+            }
+            input[type="checkbox"]:checked ~ .hello::before{
+                content: "Read less";
+            }
+            .dots.dots:has(~input[type="checkbox"]:checked){
+                display: none;
+            }
+            .extra:has(~input[type="checkbox"]:checked){
+                display: inline;
+            }
+            .y{
+                font-size: 18px;
+                 background-color:#cdc8c8;
+                padding: 5px;
+                margin-left: 20%;
+                margin-right: 8%;
+                box-sizing: border-box;
+                border-color: #22438c;
+                border: 3px solid;
+                font-family:cursive;
+
+            }
+            .extra1{
+                display: none;
+            }
+            p{
+                display: inline;
+            }
+            input[type="checkbox"]{
+                height: 2em;
+                display: block;
+                appearance: none;
+            }
+            .hello{
+                position: relative;
+                padding: 1em;
+                background-color: #252121;
+                color: #fff;
+                cursor: pointer;
+                margin-left: 80%;
+                padding: 9px;
+                margin-top: 15%;
+            }
+            .hello:before{
+                content: "Read more";
+            
+            }
+            input[type="checkbox"]:checked ~ .hello::before{
+                content: "Read less";
+            }
+            .dots1.dots1:has(~input[type="checkbox"]:checked){
+                display: none;
+            }
+            .extra1:has(~input[type="checkbox"]:checked){
+                display: inline;
+            }
+                .z{
+                font-size: 18px;
+                 background-color:#cdc8c8;
+                padding: 5px;
+                margin-left: 20%;
+                margin-right: 8%;
+                box-sizing: border-box;
+                border-color: #22438c;
+                border: 3px solid;
+                font-family: cursive;
+
+            }
+            .extra2{
+                display: none;
+            }
+            p{
+                display: inline;
+            }
+            input[type="checkbox"]{
+                height: 2em;
+                display: block;
+                appearance: none;
+            }
+            .hello{
+                position: relative;
+                padding: 1em;
+                background-color: #252121;
+                color: #fff;
+                cursor: pointer;
+                margin-left: 80%;
+                padding: 9px;
+                margin-top: 15%;
+            }
+            .hello:before{
+                content: "Read more";
+            
+            }
+            input[type="checkbox"]:checked ~ .hello::before{
+                content: "Read less";
+            }
+            .dots2.dots2:has(~input[type="checkbox"]:checked){
+                display: none;
+            }
+            .extra2:has(~input[type="checkbox"]:checked){
+                display: inline;
+            }
+            .a{
+                font-size: 18px;
+                 background-color:#cdc8c8;
+                padding: 5px;
+                margin-left: 20%;
+                margin-right: 8%;
+                box-sizing: border-box;
+                border-color: #22438c;
+                border: 3px solid;
+                font-family: cursive;
+
+            }
+            .extra3{
+                display: none;
+            }
+            p{
+                display: inline;
+            }
+            input[type="checkbox"]{
+                height: 2em;
+                display: block;
+                appearance: none;
+            }
+            .hello{
+                position: relative;
+                padding: 1em;
+                background-color: #252121;
+                color: #fff;
+                cursor: pointer;
+                margin-left: 80%;
+                padding: 9px;
+                margin-top: 15%;
+            }
+            .hello:before{
+                content: "Read more";
+            
+            }
+            input[type="checkbox"]:checked ~ .hello::before{
+                content: "Read less";
+            }
+            .dots3.dots3:has(~input[type="checkbox"]:checked){
+                display: none;
+            }
+            .extra3:has(~input[type="checkbox"]:checked){
+                display: inline;
+            }
+            .t{
+                font-size: 18px;
+                 background-color:#cdc8c8;
+                padding: 5px;
+                margin-left: 20%;
+                margin-right: 8%;
+                box-sizing: border-box;
+                border-color: #22438c;
+                border: 3px solid;
+                font-family: cursive;
+
+            }
+            .extra4{
+                display: none;
+            }
+            p{
+                display: inline;
+            }
+            input[type="checkbox"]{
+                height: 2em;
+                display: block;
+                appearance: none;
+            }
+            .hello{
+                position: relative;
+                padding: 1em;
+                background-color: #252121;
+                color: #fff;
+                cursor: pointer;
+                margin-left: 80%;
+                padding: 9px;
+                margin-top: 5%;
+                margin-right: 10%;
+            }
+            .hello:before{
+                content: "Read more";
+            
+            }
+            input[type="checkbox"]:checked ~ .hello::before{
+                content: "Read less";
+            }
+            .dots4.dots4:has(~input[type="checkbox"]:checked){
+                display: none;
+            }
+            .extra4:has(~input[type="checkbox"]:checked){
+                display: inline;
+            }
+            .i{
+            background-color: #252121;
+            color: #fff;
+            width: 100%;
+            margin: 50px auto;
+        }
+        .j{
+            background:coral;
+            display: flex;
+            color: #252121;
+        }
+        .jl{
+            flex-basis: 60%;
+            padding: 40px 60px;
+        }
+        .jr{
+            flex-basis: 40%;
+            padding: 40px;
+            background: #2f83e3;
+            color:#252121;
+        }
+        .i p{
+            margin-bottom: 40px;
+        }
+        .ir{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .ir .ig{
+            flex-basis: 45%;
+        }
+        input{
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        textarea{
+            width: 100%;
+            border: 1px solid #ccc;
+            outline: none;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        label{
+            margin-bottom: 6px;
+            display: block;
+            font-size: 20px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+        }
+        button{
+            background:#1c00b5;
+            width: 100px;
+            border: none;
+            outline: none;
+            color: #fff;
+            height: 35px;
+            border-radius: 30px;
+            margin-top: 20px;
+            box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+        }
+        .jl h3{
+            color:#252121;
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+        .jr h3{
+            color:#252121;
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+        tr td:first-child{
+            padding-right: 20px;
+            font-size: 20px;
+        }
+        tr td{
+            padding-top: 20px;
+            font-size: 15px;
+        }
+
+            </style>
+            </head>
+            
+                <body>
+                    <div class="k">
+                        <img src="img.html/bg.jpg"
+                        style="height:200px;width:1518px;">
+                    </div>
+                    <div class="kk">
+                        <h1>T&X</h1>
+                    </div>
+                    <div class="kkk">
+                        <a href="book now.html">
+                            <button class="btn">BOOK NOW</button>
+                        </a>
+                    </div>
+                    <ul>
+                        <li>About us</li>
+                        <li>
+                            <a href="#">Tour Destination</a>
+                            <ul class="dropdown">
+                                <li><a href="North Indian Packages.html">North Indian Packages</a></li><hr>
+                                <li><a href="South Indian Packages.html">South Indian Packages</a></li><hr>
+                                <li><a href="East Indian Packages.html">East Indian Packages</a></li><hr>
+                                <li><a href="West Indian Packages.html">West Indian Packages</a></li><hr>
+                                <li><a href="International Packages.html">International Packages</a></li><hr>
+                                <li><a href="State Packages.html">State Packages</a></li><hr>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="#">University Tour</a>
+                        <ul class="dropdown">
+                            <li><a href="Engineering.html">Engineering</a></li><hr>
+                            <li><a href="Architecture.html">Architecture</a></li><hr>
+                            <li><a href="Arts and Science.html">Arts and Science</a></li><hr>
+                            <li><a href="Medical.html">Medical</a></li><hr>
+                        </ul>
+                    </li>
+                        <li><a href="Calendar.html">Calendar</a></li>
+                        <li><a href="Guide.html">Guide</a></li>
+                        <li><a href="T&C.html">T&C</a></li>
+                    
+                    </ul>
+                    <br>
+                    <div class="g">
+                        <img src="img.html/ga.jpg"
+                        style="height:200px;width:1518px;">
+                    </div>
+                    <div class="gg">
+                        <h1>GUIDE</h1>
+                    </div>
+                    <br>
+                    <h1 style="margin-left: 3%;font-size: 30px;">For mentor</h1>
+                    <div class="x">
+                        <p class="original">If you are thinking of planning a trip for your School Group or University / College and you are considering any country then Edutour is definitely the perfect educational travel partner for you.If you are thinking of planning a trip for your School Group or University / College and you are considering any country then Edutour is definitely the perfect educational travel partner for you.</p>
+                        <span class="dots"></span>
+                        <p class="extra">Edutour Provides the Mentor Group Tour in SchoolWe have years of experience with special interests and educational groups and have many success stories of groups visiting. We know that India has a great deal to offer as an outdoors classroom, with pristine natural assets and authentic cultures, as well as access to amenities of international standard. Whether it is your first trip to India, or a return visit, we know we can contribute to the educational value of your programme</p>
+                        <input type="checkbox" id="b1"/>
+                        <label class="hello" for="b1"></label>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 style="margin-left: 3%;font-size: 30px;">Plan your trip</h1>
+                    <div class="y">
+                        <p class="original1">Planning a group tour can be daunting. The distance and perceived risk in many cases need to be justified by the value of the experience as a whole. Here are a few steps to guide you through the process.</p>
+                        <span class="dots1"></span>
+                        <p class="extra1">Step 1: Talk to us
+
+                            Contact us via our website form, email, Skype or phone; Share your interests, requirements and ideals for your group tour. We will guide you through the process by asking the right questions.
+                            
+                            Step 2: Proposal
+                            
+                            We take into account your group’s needs, special interests and specific requests and work with our experience and on the ground knowledge to create a proposed itinerary and estimated price. This process is a conversation and with your inputs, we refine the final proposed itinerary.
+                            
+                            Step 3: Provisional Phase
+                            
+                            Once we have the most suitable proposed itinerary and you accept it in principal, we go ahead and make some provisional preparations and bookings to make sure everything is in place for your group.
+                            
+                            Step 4: Recruit your Group
+                            
+                            If you have a preliminary group, now is the time to confirm who will be joining you. If you don’t have a group in place, we can help you with promotional material such as e-brochures and proposals to present to relevant bodies or organisations. We could also present the itinerary via a webinar or arrange a conference call to answer any questions or concerns.
+                            
+                            Step 5: Seal the Deal
+                            
+                            Once we have an idea of numbers we start finalising booking. A payment schedule, along with relevant pre-departure documents is shared and we are in constant communication to make sure all is in place. Final changes and adjustments are made 4 weeks prior to arrival and all that’s left to do is meet our tour manager at the airport / railway station or preferred location for your group’s life-changing journey.</p>
+                        <input type="checkbox" id="b2"/>
+                        <label class="hello"for="b2"></label>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <h1 style="margin-left: 3%;font-size: 30px;">Safety and security</h1>
+                    <div class="z">
+                        <p class="original2">We realise the responsibility of bringing a group to India & Abroad… Travel to any foreign destination has its risks. At Edutour, we take every precaution to make sure that groups are guided through their destination of choice as safely as possible.
+
+                            Our safety and support infrastructure has been in place for over 10 years with an impeccable record of no major incidents.</p>
+                        <span class="dots2"></span>
+                        <p class="extra2">We ensure that group leaders are briefed in advance so that they have all the information needed for their trip. Information shared includes pre-departure documents where safety guidelines are shared in order to help group leaders and groups orientate themselves regarding their upcoming trip. Our country-by-country risk assessments are updated regularly and we share this with group leaders so that they are up to speed with all the latest details. Our pre-departure and on-trip briefs undertake to give group leaders the peace of mind that they have all the information needed to feel prepared.</p>
+                        <input type="checkbox" id="b3"/>
+                        <label class="hello" for="b3"></label>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 style="margin-left: 3%;font-size: 30px;">Travel essentials</h1>
+                    <div class="a">
+                        <p class="original3">Planning a trip to a new and relatively unknown destination can be a daunting task. To make things easier, we make sure to send through a pre-departure document to all our groups. This document contains the essentials you need to know regarding the regions and countries relevant to your trip.
+
+                            Here are a few general tips to bear in mind when preparing for your visit:</p>
+                        <span class="dots3"></span>
+                        <p class="extra3">(a)Money
+
+                            How much spending money you need is very individual and depends on how much you eat (excluding the meals provided), drink and shop. When deciding how much money to bring please also takes into account what optional activities you anticipate doing.
+                            
+                            The safest way of having money in foreign currency when you travel is by using a debit/credit card from your country. Please ensure that you alert your bank that you will be travelling across borders.<br>Passports and visas
+
+                            Please take note, when it comes to passports and visas, we can only give guidelines. It is the responsibility of each traveller to check and confirm the exact requirements for your travels. But here are some steps to follow:
+                            
+                            Step 1: Check that your current passport is valid.
+                            
+                            Travellers need to check that their passports are valid for at least 90 days following their departure date from Countries. To play it safe – we advise that the passport needs to be valid for at least six months at the time of travel.
+                            
+                            Step 2: Make sure your passport has a blank visa page.
+                            
+                            It is best to have at least two pages open in your passport for potential visas during your travels.
+                            
+                            Step 3: Confirm whether you need a transit visa for flight connections.
+                            
+                            Check your flight details and consult with the relevant airline to see whether you need visas for any countries you may be passing through.
+                            
+                            Step 4: Always travel with copies of your passport and relevant visas. Make sure your documents are safe at all times. It may be a good measure to give copies of your passports and visas to your group leader for safekeeping too.<br>Travel Insurance
+
+                            Personal travel insurance is compulsory for all our expeditions. Make sure your insurance has comprehensive cover for personal accident, medical expenses, repatriation, personal effects and luggage. You should also have cancellation and curtailment insurance.</p>
+                        <input type="checkbox" id="b4"/>
+                        <label class="hello" for="b4"></label>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 style="margin-left: 3%;font-size: 30px;">Our service guarantee</h1>
+                    <div class="t">
+                        <p class="original4">Edutour is proud to stand by its service commitment to all of our educational groups:</p>
+                        <span class="dots4"></span>
+                        <p class="extra4">Private and customised tours,
+                            An exceptional tour director accompanying your group at all times,
+                            No hidden costs,
+                            Our unique #Encounter Programme,
+                            Group leaders/Educator travel for free,
+                            Authentic community service involvement,
+                            Correspondence within 48 hours,
+                            Value for money</p>
+                        <input type="checkbox" id="b5"/>
+                        <label class="hello"for="b5"></label>
+                    </div>
+                    </body>
+                    </html>
+                    <html>
+                        <body>
+                           <div class="i">
+                        <h1> Connect With Us</h1>
+                        <p>We would love to respond to your queries and help you succeed. Feel free to get in touch with us.</p>
+                        <div class="j">
+                            <div class="jl">
+                                <h3>Send Your Request</h3>
+                                <form>
+                                    <div class="ir">
+                                        <div class="ig">
+                                            <label>Name</label>
+                                            <input type="text"placeholder="Enter your name">
+                                        </div>
+                                        <div class="ig">
+                                            <label>Phone</label>
+                                            <input type="number"placeholder="Enter your ph.no">
+                                        </div>
+                                    </div>
+                                    <div class="ir">
+                                        <div class="ig">
+                                            <label>Email</label>
+                                            <input type="email"placeholder="Enter your email">
+                                        </div>
+                                        <div class="ig">
+                                            <label>Subject</label>
+                                            <input type="text"placeholder="type here">
+                                        </div>
+                                    </div>
+                                    <label>Message
+                                    </label>
+                                    <textarea rows="5" placeholder="Your message"></textarea>
+                                    <button type="submit">SEND</button>
+                                </form>
+                            </div>
+                            <div class="jr">
+                                <h3>Reach us</h3>
+                                <table>
+                                    
+                                    <tr>
+                                        <td style="font-size: 22px;">Email</td>
+                                        <td>T&X@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 22px;">Phone</td>
+                                        <td>+1 012 3456 789</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 22px;">Address</td>
+                                        <td>#15, tidal park<br>
+                                        opp.to mk mahal, chennai<br>
+                                    Tamilnadu 600096</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </body>
+                </html>
+            
