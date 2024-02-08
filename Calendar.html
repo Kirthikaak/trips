@@ -1,1 +1,487 @@
-hi kirthikaa
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+        <meta charset="utf-8">
+        <title>Calendar📅</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+          <p class="current-date"></p>
+          <div class="icons">
+            <span id="prev" class="material-symbols-rounded">chevron_left</span>
+            <span id="next" class="material-symbols-rounded">chevron_right</span>
+          </div>
+        </header>
+        <div class="calendar">
+          <ul class="weeks">
+            <li>Sun</li>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+          </ul>
+          <ul class="days"></ul>
+        </div>
+    </div>
+  <div class="holiday-info">
+    <p id="holiday-type"></p>
+    <p id="custom-text"></p>
+  </div>
+
+  <script>
+  const daysTag = document.querySelector(".days"),
+        currentDate = document.querySelector(".current-date"),
+        prevNextIcon = document.querySelectorAll(".icons span"),
+        holidayInfo = document.getElementById("holiday-type");
+
+      let date = new Date(),
+        currYear = date.getFullYear(),
+        currMonth = date.getMonth();
+
+      const months = ["January", "February", "March", "April", "May", "June", "July",
+        "August", "September", "October", "November", "December"];
+
+      const holidays = {
+        January: [1, 26],
+        February: [],
+        March: [25, 29],
+        April: [11, 17, 21],
+        May: [1, 23],
+        June: [17],
+        July: [17],
+        August: [15, 26],
+        September: [16],
+        October: [2, 12, 31],
+        November: [14],
+        December: [25],
+      };
+      const holidays1 = {
+        January: [14, 15, 16, 17, 25],
+        February: [14, 19, 24],
+        March: [6, 8, 24, 31],
+        April: [5, 9, 13, 14],
+        May: [8],
+        June: [],
+        July: [7],
+        August: [19],
+        September: [7, 15],
+        October: [10, 11, 17, 20],
+        November: [2, 3, 7, 24],
+        December: [],
+      };
+
+      const renderCalendar = () => {
+        let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(),
+          lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(),
+          lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(),
+          lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate();
+        let liTag = "";
+
+        for (let i = firstDayofMonth; i > 0; i--) {
+          liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+        }
+
+        for (let i = 1; i <= lastDateofMonth; i++) {
+          let isToday =
+            i === date.getDate() &&
+            currMonth === new Date().getMonth() &&
+            currYear === new Date().getFullYear()
+              ? "active"
+              : "";
+          let hasHoliday =
+            holidays[months[currMonth]] &&
+            holidays[months[currMonth]].includes(i)
+              ? "holiday"
+              : "";
+          let hasHoliday1 =
+            holidays1[months[currMonth]] &&
+            holidays1[months[currMonth]].includes(i)
+              ? "holiday1"
+              : "";
+          liTag += `<li class="${isToday} ${hasHoliday} ${hasHoliday1}" data-day="${i}">${i}</li>`;
+        }
+
+        for (let i = lastDayofMonth; i < 6; i++) {
+          liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
+        }
+        currentDate.innerText = `${months[currMonth]} ${currYear}`;
+        daysTag.innerHTML = liTag;
+      };
+
+      renderCalendar();
+
+      prevNextIcon.forEach((icon) => {
+        icon.addEventListener("click", () => {
+          currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+
+          if (currMonth < 0 || currMonth > 11) {
+            date = new Date(
+              currYear,
+              currMonth,
+              new Date().getDate()
+            );
+            currYear = date.getFullYear();
+            currMonth = date.getMonth();
+          } else {
+            date = new Date();
+          }
+          renderCalendar();
+        });
+      }); 
+
+      let selectedDate;
+
+  // Event listener for clicking on a date
+  daysTag.addEventListener("click", (e) => {
+    const clickedDay = e.target.dataset.day;
+    if (clickedDay) {
+      selectedDate = e.target;
+      const monthHolidays = holidays[months[currMonth]];
+      const monthHolidays1 = holidays1[months[currMonth]];
+      let customText = "";
+
+      if (monthHolidays && monthHolidays.includes(Number(clickedDay))) {
+        holidayInfo.innerText = "PUBLIC HOLIDAY🎇";
+        customText="";
+      } else if (monthHolidays1 && monthHolidays1.includes(Number(clickedDay))) {
+        holidayInfo.innerText = "RESTRICTED HOLIDAY🎊";
+      } else {
+        holidayInfo.innerText = "PLAN YOUR TRIP💡";
+      }
+
+      // Additional custom text for specific dates and months
+      switch (months[currMonth]) {
+                    case "January":
+                        if (clickedDay === "14") {
+                            customText = " BOGHI";
+                        } else if (clickedDay === "1") {
+                            customText = " NEW YEAR'S DAY";
+                        } else if (clickedDay === "15") {
+                            customText = "PONGAL/MAKAR SANKARANTI";
+                        } else if (clickedDay === "16") {
+                            customText = "MAATU PONGAL";
+                        } else if (clickedDay === "17") {
+                            customText = "KAANUM PONGAL";
+                        } else if (clickedDay === "25") {
+                            customText = "HAZRAT ALI'S BIRTHDAY";
+                        } else if (clickedDay === "26") {
+                            customText = "REPUBLIC DAY";
+                        }
+                        break;
+                    case "February":
+                        if (clickedDay === "14") {
+                            customText = "BASANT PANCHAMI";
+                        } else if (clickedDay === "19") {
+                            customText = "SHIVAJI JAYANTI";
+                        } else if (clickedDay === "24") {
+                            customText = "GURU RAVIDAS' BIRTHDAY";
+                        }
+                        break;
+                    case "March":
+                        if (clickedDay === "25") {
+                            customText = "HOLI";
+                        } else if (clickedDay === "29") {
+                            customText = "GOOD FRIDAY";
+                        } else if (clickedDay === "6") {
+                            customText = "SWAMI DAYANANDA SARASWATHI JAYANTHI";
+                        } else if (clickedDay === "8") {
+                            customText = "MAHA SHIVARATRI";
+                        } else if (clickedDay === "24") {
+                            customText = "HOLIKA DAHAN";
+                        } else if (clickedDay === "31") {
+                            customText = "EASTER SUNDAY";
+                        }
+                        break;
+                    case "April":
+                        if (clickedDay === "11") {
+                            customText = "ID-UL-FITR";
+                        } else if (clickedDay === "17") {
+                            customText = "RAM NAVAMI";
+                        } else if (clickedDay === "21") {
+                            customText = "MAHAVIR JAYANTI";
+                        } else if (clickedDay === "5") {
+                            customText = "JAMAT-UL-VIDA";
+                        } else if (clickedDay === "9") {
+                            customText = "UGADI/CHAITRA SUKLADI/GUDI PADAVA/CHETI CHAND";
+                        } else if (clickedDay === "13") {
+                            customText = "VAISAKHI";
+                        } else if (clickedDay === "14") {
+                            customText = "TAMIL NEW YEAR/VAISAKHADI/BAHAG BIHU";
+                        }
+                        break;
+                    case "May":
+                        if (clickedDay === "1") {
+                            customText = "MAY DAY";
+                        } else if (clickedDay === "23") {
+                            customText = "BUDDHA PURNIMA";
+                        } else if (clickedDay === "8") {
+                            customText = "GURU RABINDRANATH'S BIRTHDAY";
+                        }
+                        break;
+                    case "June":
+                        if (clickedDay === "17") {
+                            customText = "BAKRID";
+                        }
+                        break;
+                    case "July":
+                        if (clickedDay === "17") {
+                            customText = "MUHARRAM";
+                        } else if (clickedDay === "7") {
+                            customText = "RATH YATRA";
+                        }
+                        break;
+                    case "August":
+                        if (clickedDay === "15") {
+                            customText = "INDEPENDENCE DAY";
+                        } else if (clickedDay === "26") {
+                            customText = "JANMASHTAMI";
+                        } else if (clickedDay === "19") {
+                            customText = "RAKSHA BANDAN";
+                        }
+                        break;
+                    case "September":
+                        if (clickedDay === "7") {
+                            customText = "VINAYAKA CHATURTHI";
+                        } else if (clickedDay === "15") {
+                            customText = "THIRU ONAM DAY";
+                        }
+                        break;
+                    case "October":
+                        if (clickedDay === "16") {
+                            customText = "MILAD-UN-NABI";
+                        } else if (clickedDay === "2") {
+                            customText = "MAHATMA GANDHI'S BIRTHDAY";
+                        } else if (clickedDay === "12") {
+                            customText = "DUSSEHRA";
+                        } else if (clickedDay === "31") {
+                            customText = "DIWALI";
+                        } else if (clickedDay === "10") {
+                            customText = "DUSSEHRA";
+                        } else if (clickedDay === "11") {
+                            customText = "DUSSEHRA";
+                        } else if (clickedDay === "20") {
+                            customText = "KARAKA CHATURTHI";
+                        }
+                        break;
+                    case "November":
+                        if (clickedDay === "15") {
+                            customText = "GURU NANAK'S BIRTHDAY";
+                        } else if (clickedDay === "2") {
+                            customText = "GOVARDHAN PUJA";
+                        } else if (clickedDay === "3") {
+                            customText = "BHAI DUJ";
+                        } else if (clickedDay === "24") {
+                            customText = "GURU TEG BAHADUR'S MARTYRDOM DAY";
+                        } else if (clickedDay === "14") {
+                            customText += " Children's Day";
+                        }
+                        break;
+                    case "December":
+                        if (clickedDay === "25") {
+                            customText = "CHRISTMAS";
+                        }
+                        break;
+                    default:
+                        break;
+                }
+
+      document.getElementById("custom-text").innerText = customText;
+    }
+  });
+
+  // Check if a date is selected when the page is loaded or refreshed
+  window.addEventListener("load", () => {
+    if (!selectedDate) {
+      // If no date is selected, display the default message
+      document.getElementById("holiday-type").innerText = "Make your plans with us🤝🏻";
+      document.getElementById("custom-text").innerText = "";
+    }
+  });
+
+  </script>
+
+  <style>
+       /* Import Google font - Poppins */
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body{
+      display: flex;
+      align-items: center;
+      padding: 0 70px;
+      justify-content:left;
+      min-height: 100vh;
+      background: #ffffff;
+    }
+    .wrapper{
+      width: 450px;
+      background: #69bfe1;
+      border-radius: 10px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+      margin-top: 5cm;
+    }
+    .wrapper header{
+      display: flex;
+      align-items: center;
+      padding: 25px 30px 10px;
+      justify-content: space-between;
+    }
+    header .icons{
+      display: flex;
+    }
+    header .icons span{
+      height: 38px;
+      width: 38px;
+      margin: 0 1px;
+      cursor: pointer;
+      color: #525859;
+      text-align: center;
+      line-height: 38px;
+      font-size: 1.9rem;
+      user-select: none;
+      border-radius: 50%;
+    }
+    .icons span:last-child{
+      margin-right: -10px;
+    }
+    header .icons span:hover{
+      background: #f2f2f2;
+    }
+    header .current-date{
+      font-size: 1.45rem;
+      font-weight: 500;
+    }
+    .calendar{
+      padding: 20px;
+    }
+    .calendar ul{
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      text-align: center;
+    }
+    .calendar .days{
+      margin-bottom: 20px;
+    }
+    .calendar li{
+      color: #000000;
+      width: calc(100% / 7);
+      font-size: 1.07rem;
+    }
+    .calendar .weeks li{
+      font-weight: 500;
+      cursor: default;
+    }
+    .calendar .days li{
+      z-index: 1;
+      cursor: pointer;
+      position: relative;
+      margin-top: 30px;
+    }
+    .days li.inactive{
+      color: #7a8b8f;
+    }
+    .days li.active{
+      color: #ffffff;
+    }
+    .days li::before{
+      position: absolute;
+      content: "";
+      left: 50%;
+      top: 50%;
+      height: 40px;
+      width: 40px;
+      z-index: -1;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .days li.active::before{
+      background: #8c275d;
+    }
+    .days li:not(.active):hover::before{
+      background: #f2f2f2;
+    }
+    /* Add this CSS to your existing stylesheet or create a new one */
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    li {
+        width: calc(100% / 7);
+        box-sizing: border-box;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+    }
+    
+    /* Add a dot below the specified dates in the 'holidays' object */
+    li.holiday {
+        position: relative;
+    }
+    
+    li.holiday::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 6px;
+        background-color:rgb(255, 3, 3); /* Change the color as needed */
+        border-radius: 50%;
+        display: block;
+    }
+    li.holiday1 {
+        position: relative;
+    }
+    
+    li.holiday1::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 6px;
+        background-color:rgb(255, 255, 19); /* Change the color as needed */
+        border-radius: 50%;
+        display: block;
+    }
+
+    .holiday-info {
+      position: absolute;
+      top: 200px; /* Adjust the top position as needed */
+      left: 65%; /* Adjust the left position as needed */
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    #holiday-type {
+      font-size: 1.5rem;
+      color: #070707; /* Adjust text color as needed */
+      background-color: #fcff4d; /* Adjust background color as needed */
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</body>
+</html>
