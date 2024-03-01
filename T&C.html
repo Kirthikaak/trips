@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1">
+        
+        <style>
+            body{
+                background-color:white;
+            }
+        
+            .k{
+                position:relative ;
+                text-align: center;
+                color:aquamarine;
+                filter: blur(2px);
+                
+            }
+            .kk{
+                position: absolute;
+                top: 18%;
+                bottom: 65%;
+                left: 10%;
+                transform: translate(-50%,-50%);
+                color:#252121;
+                text-transform: uppercase;
+                font-size: 40px;
+                background-color:#fff;
+                padding-left: 5px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 5px;
+                margin-bottom: 28px;   
+            }
+            .kkk
+            {
+                position: absolute;
+                top: 18%;
+                bottom: 65%;
+                left: 85%;
+                transform: translate(-50%,-50%);
+                color:#252121;
+                text-transform: uppercase;
+                padding-left: 5px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 5px;
+                margin-bottom: 33px;
+                text-decoration: none;
+                
+            }
+            .kkk .btn{
+                background-color: crimson;
+                height: 55px;
+                font-size: 17px;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                border: #252121;
+                box-sizing: border-box;
+              width: 100px;
+            border: none;
+            outline: none;
+            color: #fff;
+            border-radius: 30px;
+            margin-top: 20px;
+            box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+            }
+            *{
+                padding: 0;
+                margin: 0;
+                font-family:monospace;
+            }
+            ul{
+                list-style: none;
+                background: #22438c;
+            }
+            ul li{
+                display: inline-block;
+                position: relative;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color:white;
+                font-size: 18px;
+            }
+            ul li a{
+                display: block;
+                padding: 10px 15px;
+                color:#fff;
+                text-decoration:none;
+                text-align: center;
+                font-size: 18px;
+            }
+            ul li ul.dropdown li{
+                display: block;
+            }
+            ul li ul.dropdown{
+                width: 100%;
+                background: #22438c;
+                position:absolute;
+                z-index: 999;
+                display: none;
+            }
+            ul li a:hover{
+                background: #112c66;
+            }
+            ul li:hover ul.dropdown{
+                display:block;
+            }
+            .g{
+                position:relative ;
+                text-align: center;
+                color:aquamarine;
+            }
+            .gg{
+                position: absolute;
+                top: 43%;
+                bottom: 65%;
+                left: 49%;
+                transform: translate(-50%,-50%);
+                color:#252121;
+                text-transform: uppercase;
+                font-size: 30px;
+                padding-left: 5px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 5px;
+                margin-bottom: 28px;   
+                
+            }
+          
+            h2{
+                font-size: 18px;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                margin-left: 50px;
+                margin-right: 50px;
+                color:rgb(76, 78, 81);
+                text-decoration: wavy;
+                text-shadow:#112c66;
+                padding:8px;
+            }
+            .i{
+            background-color: #252121;
+            color: #fff;
+            width: 100%;
+            margin: 50px auto;
+        }
+        .j{
+            background:coral;
+            display: flex;
+            color: #252121;
+        }
+        .jl{
+            flex-basis: 60%;
+            padding: 40px 60px;
+        }
+        .jr{
+            flex-basis: 40%;
+            padding: 40px;
+            background: #2f83e3;
+            color:#252121;
+        }
+        .i p{
+            margin-bottom: 40px;
+        }
+        .ir{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .ir .ig{
+            flex-basis: 45%;
+        }
+        input{
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        textarea{
+            width: 100%;
+            border: 1px solid #ccc;
+            outline: none;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        label{
+            margin-bottom: 6px;
+            display: block;
+            font-size: 20px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+        }
+        button{
+            background:#1c00b5;
+            width: 100px;
+            border: none;
+            outline: none;
+            color: #fff;
+            height: 35px;
+            border-radius: 30px;
+            margin-top: 20px;
+            box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+        }
+        .jl h3{
+            color:#252121;
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+        .jr h3{
+            color:#252121;
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+        tr td:first-child{
+            padding-right: 20px;
+            font-size: 20px;
+        }
+        tr td{
+            padding-top: 20px;
+            font-size: 15px;
+        }
+            </style>
+             </head>
+            
+             <body>
+                 <div class="k">
+                     <img src="img.html/bg.jpg"
+                     style="height:200px;width:1518px;">
+                 </div>
+                 <div class="kk">
+                     <h1>T&X</h1>
+                 </div>
+                 <div class="kkk">
+                     <a href="book now.html">
+                         <button class="btn">BOOK NOW</button>
+                     </a>
+                 </div>
+                 <ul>
+                     <li>About us</li>
+                     <li>
+                         <a href="#">Tour Destination</a>
+                         <ul class="dropdown">
+                             <li><a href="North Indian Packages.html">North Indian Packages</a></li><hr>
+                             <li><a href="South Indian Packages.html">South Indian Packages</a></li><hr>
+                             <li><a href="East Indian Packages.html">East Indian Packages</a></li><hr>
+                             <li><a href="West Indian Packages.html">West Indian Packages</a></li><hr>
+                             <li><a href="International Packages.html">International Packages</a></li><hr>
+                             <li><a href="State Packages.html">State Packages</a></li><hr>
+                         </ul>
+                 </li>
+                 <li>
+                     <a href="#">University Tour</a>
+                     <ul class="dropdown">
+                         <li><a href="Engineering.html">Engineering</a></li><hr>
+                         <li><a href="Architecture.html">Architecture</a></li><hr>
+                         <li><a href="Arts and Science.html">Arts and Science</a></li><hr>
+                         <li><a href="Medical.html">Medical</a></li><hr>
+                     </ul>
+                 </li>
+                     <li><a href="Calendar.html">Calendar</a></li>
+                     <li><a href="Guide.html">Guide</a></li>
+                     <li><a href="T&C.html">T&C</a></li>
+                 
+                 </ul>
+                 <br>
+                 <h1 style="font-size: 40px;background-color:#898383">Terms & Conditions:</h1><br>
+                 <h2>1. Booking and Payment:</h2><hr style="margin-right: 85%;margin-left: 3.2%;margin-top: 2px;"><br>
+                 <h2>. All bookings for the educational trip must be made in advance.<br>
+                    . Payment for the trip must be made by the specified deadline to secure your spot.<br>
+                    . Failure to make payment by the deadline may result in cancellation of your booking.</h2><br>
+
+                    <h2>2. Cancellations and Refunds:</h2><hr style="margin-right: 85%;margin-left: 3.2%;margin-top: 2px;"><br>
+                    <h2>. Cancellations made by participants must be notified in writing.<br>
+                        . Refunds for cancellations will be provided according to the following schedule:<br>
+                        . Cancellations made [X days] or more prior to the trip start date: Full refund minus any non-refundable deposits or expenses incurred.<br>
+                        . Cancellations made less than [X days] prior to the trip start date: No refund will be provided.<br>
+                        . The organization reserves the right to cancel the trip due to unforeseen circumstances. In such cases, participants will receive a full refund of any payments made.</h2><br>
+
+                        <h2>3. Travel Documents and Insurance:</h2><hr style="margin-right: 85%;margin-left: 3.2%;margin-top: 2px;"><br>
+                        <h2>. Participants are responsible for ensuring they have valid travel documents, such as passports and visas, if required.<br>
+                            . It is strongly recommended that participants obtain travel insurance to cover any unforeseen circumstances, including trip cancellation, medical emergencies, and lost luggage.
+                            </h2><br>
+
+                            <h2>4. Health and Safety:</h2><hr style="margin-right: 85%;margin-left: 3.2%;margin-top: 2px;"><br>
+                            <h2>. Participants must disclose any pre-existing medical conditions or dietary requirements to the organizers prior to the trip.<br>
+                                . Participants are responsible for their own health and safety during the trip and must adhere to any guidelines provided by the organizers.<br>
+                                . The organizers reserve the right to remove any participant from the trip if their behavior is deemed to pose a risk to themselves or others.</h2><br>
+
+                                <h2>5. Code of Conduct:</h2><hr style="margin-right: 85%;margin-left: 3.2%;margin-top: 2px;"><br>
+                                <h2>. Participants are expected to behave responsibly and respectfully towards fellow participants, staff, and locals at all times.<br>
+                                    . Any behavior deemed inappropriate or disruptive by the organizers may result in the participant being removed from the trip without refund.</h2><br>
+
+                                    <h2>6. Itinerary Changes:</h2><hr style="margin-right: 85%;margin-left: 3.2%;margin-top: 2px;"><br>
+                                    <h2>. The organizers reserve the right to make changes to the itinerary due to unforeseen circumstances, such as weather conditions or local events.<br>
+                                        . Participants will be notified of any significant changes to the itinerary as soon as possible.</h2><br>
+
+                                        <h2>7. Liability:</h2><hr style="margin-right: 85%;margin-left: 3.2%;margin-top: 2px;"><br>
+                                        <h2>. The organizers will not be liable for any loss, damage, injury, or expense incurred by participants during the trip, except where negligence on the part of the organizers can be proven.<br>
+                                            . Participants are advised to take appropriate precautions to safeguard their personal belongings during the trip.</h2><br>
+
+                                            <h2>9. Acceptance of Terms:</h2><hr style="margin-right: 85%;margin-left: 3.2%;margin-top: 2px;"><br>
+                                            <h2>. By booking a place on the educational trip, participants agree to abide by these terms and conditions.<br>
+                                                . For any questions or concerns regarding these terms and conditions, please contact [Organizer's Contact Information].
+                                            </h2><br>
+                                            <div class="i">
+                                                <h1> Connect With Us</h1>
+                                                <p>We would love to respond to your queries and help you succeed. Feel free to get in touch with us.</p>
+                                                <div class="j">
+                                                    <div class="jl">
+                                                        <h3>Send Your Request</h3>
+                                                        <form>
+                                                            <div class="ir">
+                                                                <div class="ig">
+                                                                    <label>Name</label>
+                                                                    <input type="text"placeholder="Enter your name">
+                                                                </div>
+                                                                <div class="ig">
+                                                                    <label>Phone</label>
+                                                                    <input type="number"placeholder="Enter your ph.no">
+                                                                </div>
+                                                            </div>
+                                                            <div class="ir">
+                                                                <div class="ig">
+                                                                    <label>Email</label>
+                                                                    <input type="email"placeholder="Enter your email">
+                                                                </div>
+                                                                <div class="ig">
+                                                                    <label>Subject</label>
+                                                                    <input type="text"placeholder="type here">
+                                                                </div>
+                                                            </div>
+                                                            <label>Message
+                                                            </label>
+                                                            <textarea rows="5" placeholder="Your message"></textarea>
+                                                            <button type="submit">SEND</button>
+                                                        </form>
+                                                    </div>
+                                                    <div class="jr">
+                                                        <h3>Reach us</h3>
+                                                        <table>
+                                                            
+                                                            <tr>
+                                                                <td style="font-size: 22px;">Email</td>
+                                                                <td>T&X@gmail.com</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size: 22px;">Phone</td>
+                                                                <td>+1 012 3456 789</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size: 22px;">Address</td>
+                                                                <td>#15, tidal park<br>
+                                                                opp.to mk mahal, chennai<br>
+                                                            Tamilnadu 600096</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                 </body>
+                 </html>
+                 
