@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1">
+        
+        <style>
+            body{
+                background-color:white;
+            }
+        
+            .k{
+                position:relative ;
+                text-align: center;
+                color:aquamarine;
+                filter: blur(2px);
+                
+            }
+            .kk{
+                position: absolute;
+                top: 18%;
+                bottom: 65%;
+                left: 10%;
+                transform: translate(-50%,-50%);
+                color:#252121;
+                text-transform: uppercase;
+                font-size: 40px;
+                background-color:#fff;
+                padding-left: 5px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 5px;
+                margin-bottom: 28px;   
+            }
+            .kkk
+            {
+                position: absolute;
+                top: 18%;
+                bottom: 65%;
+                left: 85%;
+                transform: translate(-50%,-50%);
+                color:#252121;
+                text-transform: uppercase;
+                padding-left: 5px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 5px;
+                margin-bottom: 33px;
+                text-decoration: none;
+                
+            }
+            .kkk .btn{
+                background-color: crimson;
+                height: 55px;
+                font-size: 17px;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                border: #252121;
+                box-sizing: border-box;
+              width: 100px;
+            border: none;
+            outline: none;
+            color: #fff;
+            border-radius: 30px;
+            margin-top: 20px;
+            box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+            }
+            *{
+                padding: 0;
+                margin: 0;
+                font-family:monospace;
+            }
+            ul{
+                list-style: none;
+                background: #22438c;
+            }
+            ul li{
+                display: inline-block;
+                position: relative;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color:white;
+                font-size: 18px;
+            }
+            ul li a{
+                display: block;
+                padding: 10px 15px;
+                color:#fff;
+                text-decoration:none;
+                text-align: center;
+                font-size: 18px;
+            }
+            ul li ul.dropdown li{
+                display: block;
+            }
+            ul li ul.dropdown{
+                width: 100%;
+                background: #22438c;
+                position:absolute;
+                z-index: 999;
+                display: none;
+            }
+            ul li a:hover{
+                background: #112c66;
+            }
+            ul li:hover ul.dropdown{
+                display:block;
+            }
+            </style>
+    </head>
+        <body>
+            <div class="k">
+                <img src="img.html/bg.jpg"
+                style="height:200px;width:1518px;">
+            </div>
+            <div class="kk">
+                <h1>T&X</h1>
+            </div>
+            <div class="kkk">
+                <a href="book now.html">
+                    <button class="btn">BOOK NOW</button>
+                </a>
+            </div>
+            <ul>
+                <li><a href="About Us.html">About Us</a></li>
+                <li>
+                    <a href="#">Tour Destination</a>
+                    <ul class="dropdown">
+                        <li><a href="North Indian Packages.html">North Indian Packages</a></li><hr>
+                        <li><a href="South Indian Packages.html">South Indian Packages</a></li><hr>
+                        <li><a href="East Indian Packages.html">East Indian Packages</a></li><hr>
+                        <li><a href="West Indian Packages.html">West Indian Packages</a></li><hr>
+                        <li><a href="International Packages.html">International Packages</a></li><hr>
+                        <li><a href="State Packages.html">State Packages</a></li><hr>
+                    </ul>
+            </li>
+            <li>
+                <a href="#">University Tour</a>
+                <ul class="dropdown">
+                    <li><a href="Engineering.html">Engineering</a></li><hr>
+                    <li><a href="Architecture.html">Architecture</a></li><hr>
+                    <li><a href="Arts and Science.html">Arts and Science</a></li><hr>
+                    <li><a href="Medical.html">Medical</a></li><hr>
+                </ul>
+            </li>
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="Guide.html">Guide</a></li>
+                <li><a href="T&C.html">T&C</a></li>
+            
+            </ul>
+            <br>
+            </body>
+        </html>  
